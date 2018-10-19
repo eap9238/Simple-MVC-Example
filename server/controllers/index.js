@@ -236,7 +236,7 @@ const searchDogIncrementAge = (req, res) => {
 
     dogData.age++;
 
-    return Dog.searchDogIncrementAge(req.body.name, dogData, updateCallback);
+    return Dog.findByNameAndUpdate(req.body.name, dogData, updateCallback);
   };
 
   return Dog.findByName(req.body.name, queryCallback);
