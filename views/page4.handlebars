@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>{{title}}</title>
+  <link rel="stylesheet" type="text/css" href="/hosted/style.css" />
+  <script type="application/javascript" src="/hosted/bundle.js" ></script>
+</head>
+<body>
+  <h1>Welcome to page4</h1>
+  
+  <!-- links or URLs are always GET resources as they are getting (retrieving) a resource -->
+  <a href="/">Home</a>
+  <a href="/page1">Page 1</a>
+  <a href="/page2">Page 2</a>
+  <a href="/page3">Page 3</a>
+  <a href="/getDogName">Show Name</a>
+  
+  {{#if dogs}}
+    <ul>
+      {{#each dogs}}
+        <li> {{this.name}} | {{this.age}} year(s) old | Breed: {{this.breed}}</li>
+      {{/each}}
+    </ul>
+  {{else}}
+    <p>No dogs to display.</p>
+  {{/if}}
+</body>
+</html>
